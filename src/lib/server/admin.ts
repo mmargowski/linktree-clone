@@ -13,7 +13,7 @@ try {
 		credential: pkg.credential.cert({
 			projectId: FB_PROJECT_ID,
 			clientEmail: FB_CLIENT_EMAIL,
-			privateKey: FB_PRIVATE_KEY
+			privateKey: FB_PRIVATE_KEY ? FB_PRIVATE_KEY.replace(/\\n/gm, '\n') : undefined
 		})
 	});
 } catch (err) {
