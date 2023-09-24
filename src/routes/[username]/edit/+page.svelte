@@ -11,7 +11,8 @@
 	const formDefaults = {
 		icon: 'custom',
 		title: '',
-		url: 'https://'
+		url: 'https://',
+		clicks: 0
 	};
 	const formData = writable(formDefaults);
 
@@ -40,7 +41,8 @@
 		formData.set({
 			icon: '',
 			title: '',
-			url: ''
+			url: '',
+			clicks: 0
 		});
 
 		showForm = false;

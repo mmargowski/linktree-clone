@@ -1,11 +1,20 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+
 	export let icon = 'default';
 	export let url = 'https://google.com';
 	export let title = 'Google';
+
+	const dispatch = createEventDispatcher();
+
+	function linkClicked() {
+		dispatch('linkClicked', { url });
+	}
 </script>
 
 <a
 	href={url}
+	on:click={linkClicked}
 	class="stack w-full max-w-md text-center bg-base-300 flex justify-center items-center p-4 rounded-lg not-prose no-underline"
 >
 	<img src={`/${icon}.png`} alt={icon} width="32" height="32" class="w-8" />
