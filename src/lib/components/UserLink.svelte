@@ -14,6 +14,7 @@
 
 <a
 	href={url}
+	target="_blank"
 	on:click={linkClicked}
 	class="stack w-full max-w-md text-center bg-base-300 flex justify-center items-center p-4 rounded-lg not-prose no-underline"
 >

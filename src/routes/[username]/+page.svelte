@@ -11,7 +11,6 @@
 	const onUserLinkClicked = async (event: { detail: { url: any } }) => {
 		// get the link from the event
 		const linkURL = event.detail.url;
-		const userId = user.uid;
 
 		try {
 			const usersRef = collection(db, 'users');
@@ -27,7 +26,6 @@
 			const userData = userDoc.data();
 
 			const linkIndex = userData.links.findIndex((link: { url: any }) => link.url === linkURL);
-
 			if (linkIndex !== -1) {
 				userData.links[linkIndex].clicks++;
 

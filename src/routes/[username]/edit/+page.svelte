@@ -85,6 +85,10 @@
 			<a class="btn btn-outline btn-xs" href="/login/photo">Change photo</a>
 			<a class="btn btn-outline btn-xs" href={`/${$userData.username}/bio`}>Edit Bio</a>
 		</div>
+		<div class="text-center my-4">
+			<a class="btn btn-secondary btn-xs" href={`/${$userData.username}/analytics`}>See analytics</a
+			>
+		</div>
 
 		<form class="form-control">
 			<label class="label cursor-pointer flex items-start justify-center">
